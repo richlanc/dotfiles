@@ -15,7 +15,7 @@ end
 function format_bat_stat()
     local stat = get_bat_stat()
  
-    return stat
+    return stat .. '%'
 end
  
  
