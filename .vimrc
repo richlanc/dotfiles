@@ -1,6 +1,24 @@
 " A lot of these settings will be copied from http://amix.dk/vim/vimrc.html
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" The bundles you install will be listed here
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdtree'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
@@ -21,8 +39,11 @@ set display+=lastline
 syntax enable
 set nu
 
-colorscheme desert
+"colorscheme desert
 set background=dark
+
+set t_Co=256
+color wombat256mod
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -60,8 +81,40 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status line
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
+set term=xterm-256color
+"let g:Powerline_symbols = 'fancy'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Custom keybindings 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+set pastetoggle=<F2>
+map <F2> :NERDTreeToggle<CR>
+map <F4> :set list!<CR>
+
+" Split movements
+map <c-e> :vsplit<CR>
+map <c-o> :split<CR>
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+"tab movements
+map <C-Left> :tabprevious<CR>
+map <C-Right> :tabnext<CR>
+map <C-t> :tabnew<CR>
+
+map <C-q> :q<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Line length
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
