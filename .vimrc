@@ -17,6 +17,8 @@ Bundle 'gmarik/vundle'
 " The bundles you install will be listed here
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
+Bundle 'ntpeters/vim-better-whitespace'
+Bundle 'davidhalter/jedi-vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -94,7 +96,7 @@ set term=xterm-256color
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 set pastetoggle=<F2>
-map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeToggle<CR>
 map <F4> :set list!<CR>
 
 " Split movements
