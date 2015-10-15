@@ -190,4 +190,4 @@ exec xset r rate 200 50
 
 
 # custom key combincations
-bindsym $mod+o exec /home/richard/bin/lock.sh
+bindsym $mod+o exec /home/richard/.i3/lock.sh
