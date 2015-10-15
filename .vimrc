@@ -1,7 +1,7 @@
 " A lot of these settings will be copied from http://amix.dk/vim/vimrc.html
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle 
+" => Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 set nocompatible
@@ -11,7 +11,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
@@ -28,20 +28,30 @@ set history=700
 
 " Enable filetype plugins
 filetype plugin on
-filetype indent on
+filetype indent on " Indenting based on filetype
 
 " Set to auto read when a file is changed from the outside
 set autoread
 set display+=lastline
+
+" dynamic update when searching"
+set hlsearch
+set incsearch
+
+set wildmenu " Virtual tab complete for commands
+set lazyredraw " Only redraw when it needs too
+set showmatch " Show corresponding binding character
+set mouse=a " Cursor support
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
-set nu
+set number
+set showcmd " Show the last command in the bar
+set cursorline " Highlight the cursor line
 
-"colorscheme desert
 set background=dark
 
 set t_Co=256
@@ -89,10 +99,10 @@ set wrap "Wrap lines
 " Always show the status line
 set laststatus=2
 set term=xterm-256color
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'unicode'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Custom keybindings 
+" => Custom keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 set pastetoggle=<F2>
@@ -110,13 +120,16 @@ map <c-h> <c-w>h
 "tab movements
 map <C-Left> :tabprevious<CR>
 map <C-Right> :tabnext<CR>
-map <C-t> :tabnew<CR>
 
-map <C-q> :q<CR>
+" Leader commands
+let mapleader=","
+nnoremap <leader><space> :nohlsearch<CR> " Stop highlighting the last command
+nnoremap <leader>t :tabnew<CR> " new tab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Line length
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
+"set cc=80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
