@@ -186,7 +186,7 @@ workspace_layout tabbed
 exec terminator
 exec chromium
 exec nitrogen --restore
-exec xset r rate 200 50
+exec xset r rate 200 40
 
 
 # custom key combincations

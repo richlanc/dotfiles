@@ -20,6 +20,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'davidhalter/jedi-vim'
 
+" CTRLP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -125,6 +128,10 @@ map <C-Right> :tabnext<CR>
 let mapleader=","
 nnoremap <leader><space> :nohlsearch<CR> " Stop highlighting the last command
 nnoremap <leader>t :tabnew<CR> " new tab
+
+" Spelling
+nnoremap <leader>s :setlocal spell spelllang=en_gb<CR>
+nnoremap <leader>S :setlocal nospell<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Line length
