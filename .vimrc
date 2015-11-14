@@ -1,4 +1,6 @@
 " A lot of these settings will be copied from http://amix.dk/vim/vimrc.html
+autocmd! bufwritepost .vimrc source %
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
@@ -19,6 +21,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'rking/ag.vim'
 
 " CTRLP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -44,7 +47,7 @@ set incsearch
 set wildmenu " Virtual tab complete for commands
 set lazyredraw " Only redraw when it needs too
 set showmatch " Show corresponding binding character
-set mouse=a " Cursor support
+"set mouse=a " Cursor support
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -58,7 +61,7 @@ set cursorline " Highlight the cursor line
 set background=dark
 
 set t_Co=256
-color wombat256mod
+color wombat256
 
 " Set extra options when running in GUI mode
 if has("gui_running")
