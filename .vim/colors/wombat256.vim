@@ -30,8 +30,9 @@ hi StatusLine	ctermfg=7		ctermbg=238		cterm=none		guifg=#f6f3e8	guibg=#444444	gu
 hi VertSplit	ctermfg=238		ctermbg=238		cterm=none		guifg=#444444	guibg=#444444	gui=none
 hi StatusLineNC	ctermfg=243		ctermbg=238		cterm=none		guifg=#857b6f	guibg=#444444	gui=none
 hi LineNr		ctermfg=243		ctermbg=0		cterm=none		guifg=#857b6f	guibg=#000000	gui=none
-hi SpecialKey	ctermfg=244		ctermbg=236		cterm=none		guifg=#808080	guibg=#343434	gui=none
-hi NonText		ctermfg=244		ctermbg=236		cterm=none		guifg=#808080	guibg=#303030	gui=none
+hi NonText		ctermfg=244		ctermbg=236		cterm=none		guifg=#444444	guibg=#303030	gui=none
+hi SpecialKey	ctermfg=235		ctermbg=235		cterm=none		guifg=#292929	guibg=#292929	gui=none
+"hi SpecialKey	ctermfg=244		ctermbg=236		cterm=none		guifg=#808080	guibg=#303030	gui=none
 
 " Vim >= 7.0 specific colors
 if version >= 700
@@ -39,7 +40,7 @@ hi CursorLine					ctermbg=236		cterm=none						guibg=#2d2d2d
 hi MatchParen	ctermfg=7		ctermbg=243		cterm=bold		guifg=#f6f3e8	guibg=#857b6f	gui=bold
 hi Pmenu		ctermfg=7		ctermbg=238						guifg=#f6f3e8	guibg=#444444
 hi PmenuSel		ctermfg=0		ctermbg=192						guifg=#000000	guibg=#cae682
-endif
+endif	
 
 
 " Syntax highlighting
@@ -55,7 +56,6 @@ hi Special		ctermfg=194		cterm=none		guifg=#e7f6da	gui=none
 hi String		ctermfg=113		cterm=none		guifg=#95e454	gui=italic
 hi Comment		ctermfg=246		cterm=none		guifg=#99968b	gui=italic
 hi Todo			ctermfg=245		cterm=none		guifg=#8f8f8f	gui=italic
-
 
 " Links
 hi! link FoldColumn		Folded

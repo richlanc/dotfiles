@@ -1,7 +1,6 @@
 " A lot of these settings will be copied from http://amix.dk/vim/vimrc.html
 autocmd! bufwritepost .vimrc source %
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -47,7 +46,7 @@ set incsearch
 set wildmenu " Virtual tab complete for commands
 set lazyredraw " Only redraw when it needs too
 set showmatch " Show corresponding binding character
-"set mouse=a " Cursor support
+set mouse= " Cursor support
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -78,6 +77,9 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+set listchars=space:\ ,tab:\ \  " Mark all white spaces, whilst remaining spaces
+set list
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -98,6 +100,8 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+set smartcase "Smart case searching
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status line
@@ -143,3 +147,4 @@ nnoremap <leader>S :setlocal nospell<CR>
 "set cc=80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
