@@ -21,6 +21,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'rking/ag.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 call vundle#end()
 " CTRLP
@@ -58,16 +59,16 @@ set number
 set showcmd " Show the last command in the bar
 set cursorline " Highlight the cursor line
 
-set background=dark
-
 set t_Co=256
 color wombat256
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=monospace\ 10
-    set guioptions-=T
-    set guioptions+=e
+    set guifont=monospace\ 9
+    set guioptions-=r "remove right-hand scroll bar
+    set guioptions-=L "remove left-hand scroll bar
+    set guioptions-=T "toolbar
+    set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
 endif
@@ -78,7 +79,7 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-set listchars=space:\ ,tab:\ \  " Mark all white spaces, whilst remaining spaces
+"set listchars=space:\ ,tab:\ \  " Mark all white spaces, whilst remaining spaces
 "set list
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -149,3 +150,16 @@ nnoremap <leader>S :setlocal nospell<CR>
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Line number related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+set relativenumber
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indent pluging configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#242424   ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#292929   ctermbg=235

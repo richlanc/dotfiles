@@ -183,6 +183,7 @@ assign [window_role="browser"] $WS2
 
 # window styles
 for_window [class="X-terminal-emulator"] border 1pixel
+for_window [class="Gvim"] border 1pixel
 
 workspace_layout tabbed
 
@@ -191,7 +192,6 @@ exec terminator
 exec chromium
 exec nitrogen --restore
 exec xset r rate 200 40
-
 
 # custom key combincations
 bindsym $mod+o exec /home/richard/.i3/lock.sh
