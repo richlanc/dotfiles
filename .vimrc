@@ -8,20 +8,21 @@ autocmd! bufwritepost .vimrc source %
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " The bundles you install will be listed here
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'rking/ag.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'rking/ag.vim'
 
+call vundle#end()
 " CTRLP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -78,7 +79,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 set listchars=space:\ ,tab:\ \  " Mark all white spaces, whilst remaining spaces
-set list
+"set list
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
