@@ -105,6 +105,8 @@ set wrap "Wrap lines
 
 set smartcase "Smart case searching
 
+let strip_whitespace_on_save = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

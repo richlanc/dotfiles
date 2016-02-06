@@ -23,7 +23,13 @@ do
             fi
         fi
 
-        ln -nfs "$(realpath "$dir_content")" "$location/$file"
+        link_location="$location/$file"
+        if [ -e "$link_location" ] && ! [ -L "$link_location" ]
+        then
+            echo "'$link_location' exists, creating backup"
+            mv "$link_location" "$link_location".bak
+        fi
+        ln -nfs "$(realpath "$dir_content")" "$link_location"
     fi
 done
 
