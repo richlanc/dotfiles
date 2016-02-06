@@ -1,0 +1,7 @@
+[user]
+	name = Richard Lancaster
+	email = lancasterrich@gmail.com
+[core]
+	editor = vim
+[push]
+	default = simple
