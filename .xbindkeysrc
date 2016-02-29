@@ -39,7 +39,7 @@
 
 # Examples of commands:
 
-"xbindkeys_show" 
+"xbindkeys_show"
   control+shift + q
 
 "xbacklight -dec 10"
@@ -49,13 +49,13 @@
 
 "xbacklight -inc 10"
     c:233
-    ontrol + F7
+    Control + F7
 #m:0x4 + c:73
 
 "/home/richard/scripts/cats.sh"
     c:156
 
-"/home/richard/scripts/toggleMousePad.sh"
+"/home/richard/scripts/toggleTouchpad.sh"
     c:199
 # set directly keycode (here control + f with my keyboard)
 #"xterm"

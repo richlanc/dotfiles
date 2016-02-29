@@ -1,27 +1,27 @@
 [global_config]
-  geometry_hinting = False
-  window_state = hidden
-  tab_position = hidden
   borderless = True
+  geometry_hinting = False
+  tab_position = hidden
+  window_state = hidden
 [keybindings]
-[profiles]
-  [[default]]
-    scrollbar_position = hidden
-    background_image = None
-    login_shell = True
-    visible_bell = True
-    use_system_font = False
-    foreground_color = "#00ff00"
-    scroll_on_output = False
-    show_titlebar = False
-    font = Monospace 9
-    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_image = None
+    font = Monospace 9
+    foreground_color = "#00ff00"
+    login_shell = True
+    scroll_on_output = False
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+    visible_bell = True

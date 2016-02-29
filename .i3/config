@@ -188,10 +188,9 @@ for_window [class="Gvim"] border 1pixel
 workspace_layout tabbed
 
 # execs
-exec terminator
-exec chromium
 exec nitrogen --restore
 exec xset r rate 200 40
+exec terminator
 
 # custom key combincations
 bindsym $mod+o exec /home/richard/.i3/lock.sh

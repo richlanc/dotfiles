@@ -2,9 +2,8 @@
 
 # programs on login
 xfce4-volumed
-nm-applet &
 xbindkeys &
-xbacklight -set 40 &
+xbacklight -set 30 &
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' -e 'keycode 166 = Home' -e 'keycode 167 = End' -e "keycode 135 = Super_R";
 
 # touchpad options
