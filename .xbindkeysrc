@@ -57,6 +57,7 @@
 
 "/home/richard/scripts/toggleTouchpad.sh"
     c:199
+
 # set directly keycode (here control + f with my keyboard)
 #"xterm"
 #  c:41 + m:0x4

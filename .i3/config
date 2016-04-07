@@ -189,7 +189,11 @@ workspace_layout tabbed
 
 # execs
 exec nitrogen --restore
-exec xset r rate 200 40
+exec xset r rate 300 40
+exec xbindkeys
+exec xbacklight -set 30
+exec synclient PalmDetect=1 TapButton1=1 TapButton2=3 VertTwoFingerScroll=1 HorizTwoFingerScroll=1
+exec xmodmap /home/richard/.xmodmaprc
 exec terminator
 
 # custom key combincations

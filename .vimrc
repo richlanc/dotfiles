@@ -50,6 +50,9 @@ set lazyredraw " Only redraw when it needs too
 set showmatch " Show corresponding binding character
 set mouse= " Cursor support
 
+set undofile
+set undodir=~/.vim/undodir
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -143,6 +146,9 @@ nnoremap <leader>t :tabnew<CR> " new tab
 " Spelling
 nnoremap <leader>s :setlocal spell spelllang=en_gb<CR>
 nnoremap <leader>S :setlocal nospell<CR>
+
+" Save RO files
+cmap w!! w !sudo tee > /dev/null %
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Line length

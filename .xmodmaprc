@@ -1,0 +1,18 @@
+! Clear modifiers
+clear lock
+clear mod3
+clear mod4
+
+! Move Hyper to mod3
+remove Mod4 = Hyper_L
+add Mod3 = Hyper_L
+add Mod4 = Super_L
+add Mod4 = Super_R
+
+! Reassign keys
+!keycode 66 = Hyper_L
+keycode 66 = Escape
+keycode 166 = Home
+keycode 167 = End
+keycode 135 = Super_R
+
