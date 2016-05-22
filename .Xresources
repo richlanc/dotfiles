@@ -1,0 +1,36 @@
+! Meta
+!xterm*termName: xterm-256color
+XTerm*locale: true
+Xterm*saveLines: 4096
+xterm*borderWidth: 0
+
+! font
+xterm*faceName: Monospace:size=9:antialias=true
+xterm*font: 7x13
+
+! Wombat256 like
+*.foreground:   #f6f3e8
+*.background:   #242424
+*.cursorColor:  #656565
+
+!*.foreground:   #00ff00
+!*.background:   #292929
+!*.cursorColor:  #00ff00
+
+! ambience - hacked out of terminator
+*colour1: #2e3436
+*colour2: #cc0000
+*colour3: #4e9a06
+*colour4: #c4a000
+*colour5: #3465a4
+*colour6: #75507b
+*colour7: #06989a
+*colour8: #d3d7cf
+*colour9: #555753
+*colour10: #ef2929
+*colour11: #8ae234
+*colour12: #fce94f
+*colour13: #729fcf
+*colour14: #ad7fa8
+*colour15: #34e2e2
+*colour16: #eeeeec

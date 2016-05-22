@@ -31,7 +31,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -179,10 +179,12 @@ client.unfocused        #333333 #93a1a1 #fdf6e3 #292d2e
 
 # Assignments
 assign [class="X-terminal-emulator"] $WS1
+assign [class="XTerm"] $WS1
 assign [window_role="browser"] $WS2
 
 # window styles
 for_window [class="X-terminal-emulator"] border 1pixel
+for_window [class="XTerm"] border 1pixel
 for_window [class="Gvim"] border 1pixel
 
 workspace_layout tabbed
@@ -195,6 +197,7 @@ exec xbacklight -set 30
 exec synclient PalmDetect=1 TapButton1=1 TapButton2=3 VertTwoFingerScroll=1 HorizTwoFingerScroll=1
 exec xmodmap /home/richard/.xmodmaprc
 exec terminator
+exec xset -b  # Disable PC speaker
 
 # custom key combincations
 bindsym $mod+o exec /home/richard/.i3/lock.sh
