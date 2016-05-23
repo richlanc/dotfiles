@@ -3,6 +3,7 @@
 XTerm*locale: true
 Xterm*saveLines: 4096
 xterm*borderWidth: 0
+XTerm*utf8: 1
 
 ! font
 xterm*faceName: Monospace:size=9:antialias=true
@@ -17,20 +18,42 @@ xterm*font: 7x13
 !*.background:   #292929
 !*.cursorColor:  #00ff00
 
-! ambience - hacked out of terminator
-*colour1: #2e3436
-*colour2: #cc0000
-*colour3: #4e9a06
-*colour4: #c4a000
-*colour5: #3465a4
-*colour6: #75507b
-*colour7: #06989a
-*colour8: #d3d7cf
-*colour9: #555753
-*colour10: #ef2929
-*colour11: #8ae234
-*colour12: #fce94f
-*colour13: #729fcf
-*colour14: #ad7fa8
-*colour15: #34e2e2
-*colour16: #eeeeec
+!!colors ripped from vim color theme "Wombat"
+! stolen from https://github.com/mateusz-fiolka/dotf/blob/master/xdefaults/.Xdefaults
+*foreground:            rgb:f6/f3/e8
+*background:            rgb:24/24/24
+
+!black
+*color0:                rgb:0/0/0
+*color8:                rgb:25/25/25
+
+!red
+*color1:                rgb:e5/78/6d
+*color9:                rgb:eb/88/7e
+
+!green
+*color2:                rgb:95/e4/54
+*color10:               rgb:95/f0/6d
+
+!brown/yellow
+*color3:                rgb:ca/e6/82
+*color11:               rgb:da/f6/82
+
+!blue
+!
+*color4:                rgb:6a/a6/c2
+*color12:               rgb:7a/b6/d2
+
+!magenta
+*color5:                rgb:80/7c/aa
+*color13:               rgb:82/7a/b1
+
+!cyan
+*color6:                rgb:8a/c6/f2
+*color14:               rgb:a1/cd/cd
+
+!white
+*color7:                rgb:ff/ff/ff
+*color15:               rgb:dd/dd/dd
+
+XTerm*cursorBlink: true
