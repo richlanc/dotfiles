@@ -1,13 +1,31 @@
-! Meta
-!xterm*termName: xterm-256color
+! Shared xterm - urxt
+*faceName: Monospace:size=9:antialias=true
+*cursorBlink: true
+
+! Xft settings
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! urxvt specific
+URxvt.font:     xft:Monospace:size=9:antialias=true
+URxvt.boldFont: xft:Monospace:bold:size=9:antialias=true
+URxvt.italicFont: xft:Monospace:italic:size=9:antialias=true
+UURxvt*scrollTtyOutput:  false
+Rxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt*scrollBar:  false
+URxvt*fading:  15
+URxvt*visualBell:  true
+URxvt*letterSpace: -2
+
+! Xterm specifc
 XTerm*locale: true
 Xterm*saveLines: 4096
 xterm*borderWidth: 0
 XTerm*utf8: 1
-
-! font
-xterm*faceName: Monospace:size=9:antialias=true
-xterm*font: 7x13
 
 ! Wombat256 like
 *.foreground:   #f6f3e8
@@ -56,4 +74,3 @@ xterm*font: 7x13
 *color7:                rgb:ff/ff/ff
 *color15:               rgb:dd/dd/dd
 
-XTerm*cursorBlink: true
