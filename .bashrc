@@ -113,3 +113,36 @@ PS1="\[\033[01;37m\]$? $(if [[ $? == 0 ]]; then echo "\[\033[01;32m\]\342\234\22
 
 # Custom commands
 alias backup='rsync_tmbackup.sh /home/richard/backup/ /media/richard/Backup_?/'
+
+# Visualise the size of the tty, useful for cli games like ADOM
+function tty_fill {
+    lines=$(tput lines)
+    for line in $(seq 1 $lines); do
+        col_start=1
+        if [ $line = 1 ]; then
+            printf "%s" "--- start ---"
+            col_start=14
+        elif [ $line = $lines ]; then
+            printf "%s" "--- end ---"
+            col_start=12
+        fi
+        for j in $(seq $col_start $(tput cols)); do
+            printf "."
+        done
+
+        if [ $line != $lines ]; then
+            echo ""
+        fi
+    done
+
+    read
+}
+
+# Set/get tty size, useful for cli games like ADOM
+function tty_size {
+    if ! [ -z $1 ] && ! [ -z $2 ]; then
+        stty rows $1 cols $2
+    else
+        printf "Current size: %sx%s\n" $(tput lines) $(tput cols)
+    fi
+}
