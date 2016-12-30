@@ -146,3 +146,6 @@ function tty_size {
         printf "Current size: %sx%s\n" $(tput lines) $(tput cols)
     fi
 }
+
+export WINEDEBUG=-all
+
