@@ -113,6 +113,7 @@ PS1="\[\033[01;37m\]$? $(if [[ $? == 0 ]]; then echo "\[\033[01;32m\]\342\234\22
 
 # Custom commands
 alias backup='~/bin/rsync_tmbackup.sh /home/richard/backup/ /media/richard/Backup_?/'
+alias syncHDD='unison /home/richard/backup/ /media/richard/Backup_HDD/lenovo_sync'
 
 # Visualise the size of the tty, useful for cli games like ADOM
 function tty_fill {
