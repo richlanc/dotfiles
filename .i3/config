@@ -192,6 +192,7 @@ for_window [class="Gvim"] border 1pixel
 workspace_layout tabbed
 
 # execs
+exec compton --config ~/.compton.conf -b
 exec urxvtd -o
 exec nitrogen --restore
 exec xset r rate 300 40
