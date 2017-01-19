@@ -16,12 +16,16 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " The bundles you install will be listed here
-Plugin 'Lokaltog/vim-powerline'
+"Plugin 'Lokaltog/vim-powerline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'rking/ag.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 " CTRLP
@@ -116,7 +120,19 @@ let strip_whitespace_on_save = 1
 " Always show the status line
 set laststatus=2
 set term=xterm-256color
+set ttimeoutlen=50
+
+" Powerline
 let g:Powerline_symbols = 'unicode'
+
+" Airline
+let g:airline_detect_paste=1
+let g:airline_detect_modified=1
+let g:airline_powerline_fonts=1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline_theme='term'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Custom keybindings
@@ -126,22 +142,12 @@ set pastetoggle=<F2>
 map <F3> :NERDTreeToggle<CR>
 map <F4> :set list!<CR>
 
-" Split movements
-map <c-e> :vsplit<CR>
-map <c-o> :split<CR>
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-
-"tab movements
-map <C-Left> :tabprevious<CR>
-map <C-Right> :tabnext<CR>
-
 " Leader commands
 let mapleader=","
-nnoremap <leader><space> :nohlsearch<CR> " Stop highlighting the last command
-nnoremap <leader>t :tabnew<CR> " new tab
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>h :tabp<CR>
+nnoremap <leader>l :tabn<CR>
 
 " Spelling
 nnoremap <leader>s :setlocal spell spelllang=en_gb<CR>
@@ -155,8 +161,8 @@ cmap w!! w !sudo tee > /dev/null %
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 "set cc=80
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Line number related
@@ -171,3 +177,4 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#242424   ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#292929   ctermbg=235
+

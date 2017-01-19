@@ -10,9 +10,10 @@ Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
 ! urxvt specific
-URxvt.font:     xft:Monospace:size=9:antialias=true
-URxvt.boldFont: xft:Monospace:bold:size=9:antialias=true
-URxvt.italicFont: xft:Monospace:italic:size=9:antialias=true
+! https://github.com/powerline/fonts
+URxvt.font:     xft:DejaVu Sans Mono for Powerline:regular:size=9
+URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:bold:size=9
+URxvt.italicFont: xft:DejaVu Sans Mono for Powerline:italic:size=9
 UURxvt*scrollTtyOutput:  false
 Rxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
