@@ -192,10 +192,11 @@ for_window [class="Gvim"] border 1pixel
 workspace_layout tabbed
 
 # execs
+exec ~/scripts/toggleTouchpad.sh
 exec compton --config ~/.compton.conf -b
 exec urxvtd -o
 exec nitrogen --restore
-exec xset r rate 300 40
+exec xset r rate 300 50
 exec xbindkeys
 exec xbacklight -set 30
 exec synclient PalmDetect=1 TapButton1=1 TapButton2=3 VertTwoFingerScroll=1 HorizTwoFingerScroll=1
@@ -204,4 +205,4 @@ exec xset -b  # Disable PC speaker
 exec unclutter -grab
 
 # custom key combincations
-bindsym $mod+o exec /home/richard/.i3/lock.sh
+bindsym $mod+o exec ~/.i3/lock.sh
