@@ -12,18 +12,24 @@ call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " The bundles you install will be listed here
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'ntpeters/vim-better-whitespace'
+"Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'francoiscabrol/ranger.vim'
+Plugin 'sirtaj/vim-openscad'
+
+Plugin 'vim-syntastic/syntastic'
+Plugin 'Vimjas/vim-python-pep8-indent'
+
+"Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
@@ -106,7 +112,9 @@ set wrap "Wrap lines
 
 set smartcase "Smart case searching
 
-let strip_whitespace_on_save = 1
+"let g:strip_whitespace_on_save = 1
+"let g:strip_whitespace_confirm = 0
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status line
@@ -148,20 +156,47 @@ cmap w!! w !sudo tee > /dev/null %
 " => Line length
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
-"set cc=80
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Line number related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
-set relativenumber
+"set relativenumber
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent pluging configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#242424   ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#292929   ctermbg=235
+autocmd  VimEnter,Colorscheme  *  :hi  IndentGuidesOdd  guibg=#242424  ctermbg=234
+autocmd  VimEnter,Colorscheme  *  :hi  IndentGuidesEven   guibg=#292929  ctermbg=235
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args='--ignore=E501,E265'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NerdTree configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python-mode configuration - Don't care for it
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pymode = 1
+let g:pymode_trim_whitespaces = 1
+let g:pymode_options = 1
+let g:pymode_python = 'python3'
+let g:pymode_indent = 1
+let g:pymode_lint = 1
+
